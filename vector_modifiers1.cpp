@@ -2,10 +2,10 @@
 using namespace std;
 int main()
 {
-    vector<int> a;
+    // vector<int> a;
     // vector assign-----------------
-    vector<int> b = {5, 4,2,1,3,4, 3, 5};
-    a = b;
+    vector<int> v = {5, 4, 2, 1, 3, 5, 3, 5};
+    // a = v;
 
     // vector push back ---------------------
     // a.push_back(10);
@@ -15,7 +15,7 @@ int main()
     // a.pop_back();
     // a.pop_back();
     // vector insert ------------------normalway
-    vector<int> c = {3, 2, 1, 2};
+    // vector<int> c = {3, 2, 1, 2};
     // a.insert(a.begin()+2,3);
     // in a vector insert
     // a.insert(a.begin() + a.size()-1, 4);
@@ -24,8 +24,22 @@ int main()
     // vector erase function----------------------
     // a.erase(a.begin()+1);
 
-    // erase in diffarent way 
-    a.erase(a.begin()+1,a.end()-2);
+    // erase in diffarent way
+    // a.erase(a.begin()+1,a.end()-2);
+    // vector replace function -----------------
+    // replace(v.begin(),v.end()-2,5,69);
+    // vector find function -------------
+
+    // vector<int>::iterator it = find(v.begin(), v.end(), 5);
+
+    // we can replace this by this way -----------
+
+    auto it = find(v.begin(), v.end(), 5);
+
+    if (it != v.end())
+    {
+        cout << "yes";
+    }
 
     // normal for loop -----------------
     // for (int i = 0; i < a.size(); i++)
@@ -33,7 +47,7 @@ int main()
     //     cout << a[i] << " ";
     // }
     // range base for loop------------------------
-    for (int x : a)
+    for (int x : v)
     {
         cout << x << " ";
     }
